@@ -1,0 +1,13 @@
+<h1>Welcome !</h1>
+<p><%= @user%></p>
+
+<%@blogs.each do |b| %>
+
+<div class="postDiv">
+    <a href="/blogs/<%=b.id%>"><%=b.title%></a><br>
+    <%= b.body %> <br> <br>
+    <% userId = b.user_id %>
+    <p class="posted-by">Posted by <a href="/users/<%=userId%>"><%= @users.find(userId).email%></a> </p>
+</div>
+
+<% end %>

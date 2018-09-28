@@ -1,0 +1,11 @@
+<h1>Create A Post</h1>
+<%= form_for @blog do |f| %>
+    <%= f.label :title%>
+    <%= f.text_field :title%> <br> <br>
+
+    <%= f.label :title%>
+    <%= f.text_area :body%> <br> <br>
+
+    <%= f.submit "Post"%>
+  
+<% end %>

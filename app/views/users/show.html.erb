@@ -1,0 +1,13 @@
+<h4>
+    <% if current_user.id == @user.id %>
+        Your Posts
+        <% else %>
+            <%= @user.email%>'s Posts
+    <% end %>
+</h4>
+<% @user.blogs.reverse.each do |b| %>
+<div class="postDiv">
+    <a href="/blogs/<%=b.id%>"><%=b.title%></a><br>
+    <%= b.body %> <br> <br>
+</div>
+<% end %>
